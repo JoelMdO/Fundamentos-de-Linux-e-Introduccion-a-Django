@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Delete</title>
+  </head>
+  <body>
+    {% include "ecommerce/messages.html" %}
+    <h1>Eliminar producto {{ product.title }}</h1>
+    <p>${{ product.price }}</p>
+    <form method="post" action=".">
+      {% csrf_token %} Estás seguro de que deseas eliminar este producto?
+      <button type="submit">Eliminar Producto</button>
+      <a href="/ecommerce/{{ product.id }}/">Cancelar</a>
+    </form>
+  </body>
+</html>

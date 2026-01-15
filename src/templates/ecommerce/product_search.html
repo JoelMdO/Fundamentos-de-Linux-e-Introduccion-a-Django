@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Delete</title>
+  </head>
+  <body>
+    {% include "ecommerce/search.html" %} {% include "ecommerce/messages.html"%}
+    <h1>Buscar productos</h1>
+    <form method="GET" action="/ecommerce/">
+      {% csrf_token %}
+      <input type="text" name="q" placeholder="Buscar productos" />
+      <button type="submit">Buscar</button>
+      <a href="/ecommerce/">Cancelar</a>
+    </form>
+  </body>
+</html>
