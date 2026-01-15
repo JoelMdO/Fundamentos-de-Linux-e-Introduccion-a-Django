@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+
 # Fundamentos-de-Linux-e-Introducci-n-a-Django
+
 =======
+
 # 🐳 An example Django + Docker app
 
 You could use this example app as a base for your new project or as a guide to
@@ -72,27 +75,27 @@ solutions very easily. You could follow a specific library's installation
 ## 🍣 Notable opinions and extensions
 
 - **Packages and extensions**:
-    - *[whitenoise](https://github.com/evansd/whitenoise)* for serving static files
-    - *[django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar)* for displaying info about a request
+  - _[whitenoise](https://github.com/evansd/whitenoise)_ for serving static files
+  - _[django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar)_ for displaying info about a request
 - **Linting and formatting**:
-    - *[ruff](https://github.com/astral-sh/ruff)* is used to lint and format the code base
+  - _[ruff](https://github.com/astral-sh/ruff)_ is used to lint and format the code base
 - **Django apps**:
-    - Add `pages` app to render a home page
-    - Add `up` app to provide a few health check pages
+  - Add `pages` app to render a home page
+  - Add `up` app to provide a few health check pages
 - **Config**:
-    - Log to STDOUT so that Docker can consume and deal with log output
-    - Extract a bunch of configuration settings into environment variables
-    - Rename project directory from its custom name to `config/`
-    - `src/config/settings.py` and the `.env` file handles configuration in all environments
+  - Log to STDOUT so that Docker can consume and deal with log output
+  - Extract a bunch of configuration settings into environment variables
+  - Rename project directory from its custom name to `config/`
+  - `src/config/settings.py` and the `.env` file handles configuration in all environments
 - **Front-end assets**:
-    - `assets/` contains all your CSS, JS, images, fonts, etc. and is managed by esbuild
-    - Custom `502.html` and `maintenance.html` pages
-    - Generate favicons using modern best practices
+  - `assets/` contains all your CSS, JS, images, fonts, etc. and is managed by esbuild
+  - Custom `502.html` and `maintenance.html` pages
+  - Generate favicons using modern best practices
 - **Django defaults that are changed**:
-    - Use Redis as the default Cache back-end
-    - Use signed cookies as the session back-end
-    - `public/` is the static directory where Django will serve static files from
-    - `public_collected/` is where `collectstatic` will write its files to
+  - Use Redis as the default Cache back-end
+  - Use signed cookies as the session back-end
+  - `public/` is the static directory where Django will serve static files from
+  - `public_collected/` is where `collectstatic` will write its files to
 
 Besides the Django app itself:
 
@@ -137,9 +140,9 @@ cp .env.example .env
 
 #### Build everything:
 
-*The first time you run this it's going to take 5-10 minutes depending on your
+_The first time you run this it's going to take 5-10 minutes depending on your
 internet connection speed and computer's hardware specs. That's because it's
-going to download a few Docker images and build the Python + Yarn dependencies.*
+going to download a few Docker images and build the Python + Yarn dependencies._
 
 ```sh
 docker compose up --build
@@ -159,7 +162,7 @@ in the `.env` file for the `DOCKER_WEB_PORT_FORWARD` variable to fix this.
 ./run manage migrate
 ```
 
-*We'll go over that `./run` script in a bit!*
+_We'll go over that `./run` script in a bit!_
 
 #### Check it out in a browser:
 
@@ -179,7 +182,7 @@ Visit <http://localhost:8000> in your favorite browser.
 ./run format
 ```
 
-*There's also a `./run quality` command to run the above commands together.*
+_There's also a `./run quality` command to run the above commands together._
 
 #### Running the test suite:
 
@@ -231,9 +234,9 @@ This comes in handy to run various Docker commands because sometimes these
 commands can be a bit long to type. Feel free to add as many convenience
 functions as you want. This file's purpose is to make your experience better!
 
-*If you get tired of typing `./run` you can always create a shell alias with
+_If you get tired of typing `./run` you can always create a shell alias with
 `alias run=./run` in your `~/.bash_aliases` or equivalent file. Then you'll be
-able to run `run` instead of `./run`.*
+able to run `run` instead of `./run`._
 
 ## ✨ Running a script to automate renaming the project
 
@@ -265,9 +268,9 @@ is going to:
 - Perform a number of find / replace actions
 - Optionally initialize a new git repo for you
 
-*Afterwards you can delete this script because its only purpose is to assist in
+_Afterwards you can delete this script because its only purpose is to assist in
 helping you change this project's name without depending on any complicated
-project generator tools or 3rd party dependencies.*
+project generator tools or 3rd party dependencies._
 
 If you're not comfy running the script or it doesn't work for whatever reasons
 you can [check it
@@ -335,7 +338,7 @@ either for Python or Node.
 
 1. Directly edit `pyproject.toml` or `assets/package.json` to add your package
 2. `./run deps:install` or `./run deps:install --no-build`
-    - The `--no-build` option will only write out a new lock file without re-building your image
+   - The `--no-build` option will only write out a new lock file without re-building your image
 
 ##### Option 2
 
