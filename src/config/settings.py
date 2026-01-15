@@ -37,7 +37,8 @@ LOGIN_REDIRECT_URL = "/admin/login/"
 # Application definitions
 INSTALLED_APPS = [
     "pages.apps.PagesConfig",
-    "ecommerce.apps.EcommerceConfig", #<--- Added ecommerce app
+    "ecommerce.apps.EcommerceConfig", 
+    "base.apps.BaseConfig",#<--- Added base app
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
