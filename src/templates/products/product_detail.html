@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product View</title>
+  </head>
+  <body>
+    {% if title %}
+    <h1>{{ title }}</h1>
+    {% end if %}
+    <ul>
+      {% for product in object_list %}
+      <li>
+        <h2>{{ product.title }} - {{product.slug}}</h2>
+        <p>Price: ${{ product.price }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
