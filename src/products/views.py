@@ -97,6 +97,7 @@ class ProtectedProductCreateView(LoginRequiredMixin, CreateView):
 ##--------------------------------------------------------
 class ProtectedProductListView(LoginRequiredMixin, ListView):
     model = Product
+    template_name = "products/protected_product_list.html"
 
     def get_queryset(self) -> QuerySet[Any]:
         return super().get_queryset().filter(user=self.request.user)
